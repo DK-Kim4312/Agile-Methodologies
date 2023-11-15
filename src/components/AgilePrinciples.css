@@ -1,0 +1,24 @@
+.agile-principles {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .agile-principles h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .agile-principles p {
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .agile-principles ol {
+    margin-left: 20px;
+  }
+  
+  .agile-principles li {
+    margin-bottom: 10px;
+  }
+  

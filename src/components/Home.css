@@ -1,0 +1,19 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .home-container .navigate-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .home-container .navigate-button:hover {
+    background-color: #0056b3;
+  }
+  
