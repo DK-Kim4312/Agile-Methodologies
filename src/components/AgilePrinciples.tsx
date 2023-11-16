@@ -1,26 +1,40 @@
 import React from 'react';
 import './AgilePrinciples.css'; // Importing the CSS file for styling
 import { Link } from 'react-router-dom';
+import AgilePrinciplesText from './AgilePrinciplesText';
 
+function FadeInSection(props: any) { // modified from https://dev.to/selbekk/how-to-fade-in-content-as-it-scrolls-into-view-10j4
+  const [isVisible, setVisible] = React.useState(false);
+  const domRef = React.useRef<HTMLDivElement | null>(null);
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting));
+    });
+    if (domRef.current) {
+      observer.observe(domRef.current);
+    }
+  }, []);
+  return (
+    <div
+      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+      ref={domRef}
+    >
+      {props.children}
+    </div>
+  );
+}
 const AgilePrinciples: React.FC = () => {
   return (
     <div className="agile-principles">
       <h2>Agile Principles</h2>
       <p>The Agile Manifesto is based on twelve fundamental principles:</p>
-      <ol>
-        <li>Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.</li>
-        <li>Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.</li>
-        <li>Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.</li>
-        <li>Business people and developers must work together daily throughout the project.</li>
-        <li>Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.</li>
-        <li>The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.</li>
-        <li>Working software is the primary measure of progress.</li>
-        <li>Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.</li>
-        <li>Continuous attention to technical excellence and good design enhances agility.</li>
-        <li>Simplicity—the art of maximizing the amount of work not done—is essential.</li>
-        <li>The best architectures, requirements, and designs emerge from self-organizing teams.</li>
-        <li>At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.</li>
-      </ol>
+      {AgilePrinciplesText.map(text => (
+        <FadeInSection key={text}>
+          <div className="box" >
+            <span>{text}</span>
+          </div>
+        </FadeInSection>
+      ))}
       {/* Navigation Link to AgilePrinciples Page */}
       <Link to="/" className="navigate-button">
         Go back Home
