@@ -1,27 +1,49 @@
-# Agile-Methodologies
+# Agile Methodologies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Agile Methodologies is a website created using React that introduces agile concepts and features a modern UI look. 
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Introduction to Agile**: Provides an overview of agile methodologies, including Agile Manifesto, principles, and practices.
+- **Key Concepts**: Explains fundamental agile concepts such as user stories, sprints, backlog grooming, and continuous integration.
+- **Modern UI Design**: Features a visually appealing and user-friendly interface, enhancing the browsing experience.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone the repository:
 
-## What it is
+    ```bash
+    git clone https://github.com/DK-Kim4312/Agile-Methodologies.git
+    ```
 
-What you can find in this project:
+2. Navigate to the project directory:
 
-### Home
+    ```bash
+    cd Agile-Methodologies
+    ```
 
-Simple home page that has a title and a button to navigate to the Agile-Methodologies page
+3. Install dependencies:
 
-### Agile Methodologies
+    ```bash
+    npm install
+    ```
 
-List of Agile Methodologies and a link to navigate back to home
+4. Run the development server:
+
+    ```bash
+    npm start
+    ```
+
+## Contributing
+
+We welcome contributions to improve and expand Agile Methodologies! If you'd like to contribute, please follow these steps:
+
+- Fork the repository and create a new branch for your feature or improvement.
+- Make your changes, ensuring adherence to coding standards and conventions.
+- Test your changes thoroughly to prevent regressions.
+- Submit a pull request detailing the changes made and their significance.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
